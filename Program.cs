@@ -18,7 +18,7 @@ namespace grpc_net
             server.Start();
 
             Console.WriteLine("Server listening on port " + Port);
-            Console.WriteLine("Press any key to stop the server...");
+            Console.WriteLine("CTRL+C to stop the server...");
             Thread.Sleep(Timeout.Infinite);
 
             server.ShutdownAsync().Wait();            
