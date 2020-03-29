@@ -1,0 +1,3 @@
+obj/Debug/netcoreapp2.1/Environment.cs \
+obj/Debug/netcoreapp2.1/EnvironmentGrpc.cs: /home/alan/.nuget/packages/grpc.tools/2.27.0/build/native/include/google/protobuf/empty.proto\
+ environment.proto

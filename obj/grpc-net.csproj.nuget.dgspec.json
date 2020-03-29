@@ -1,0 +1,71 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/alan/git/grpc-net/grpc-net.csproj": {}
+  },
+  "projects": {
+    "/home/alan/git/grpc-net/grpc-net.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/alan/git/grpc-net/grpc-net.csproj",
+        "projectName": "grpc-net",
+        "projectPath": "/home/alan/git/grpc-net/grpc-net.csproj",
+        "packagesPath": "/home/alan/.nuget/packages/",
+        "outputPath": "/home/alan/git/grpc-net/obj/",
+        "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "/opt/dotnet/sdk/NuGetFallbackFolder"
+        ],
+        "configFilePaths": [
+          "/home/alan/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netcoreapp2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netcoreapp2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netcoreapp2.1": {
+          "dependencies": {
+            "Google.Protobuf": {
+              "target": "Package",
+              "version": "[3.11.4, )"
+            },
+            "Grpc.Core": {
+              "target": "Package",
+              "version": "[2.27.0, )"
+            },
+            "Grpc.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[2.27.0, )"
+            },
+            "Microsoft.NETCore.App": {
+              "target": "Package",
+              "version": "[2.1.0, )",
+              "autoReferenced": true
+            }
+          },
+          "imports": [
+            "net461"
+          ],
+          "assetTargetFallback": true,
+          "warn": true
+        }
+      }
+    }
+  }
+}
