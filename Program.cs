@@ -8,11 +8,11 @@ namespace grpc_net
 {
     class Program
     {
-        const int Port = 50051;
+        const int Port = 10000;
 
         static async Task<int> Main(string[] args)
         {
-            if (args[0] == "-server") {
+            if (args.Length > 0 && args[0] == "-server") {
                 Server server = new Server
                 {
                     Services = { GrpcEnvironment.EnvironmentService.BindService(new GrpcEnvironmentServer())},
