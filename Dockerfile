@@ -1,6 +1,11 @@
-FROM mcr.microsoft.com/dotnet/runtime:5.0
+FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
+ENV PROTOBUF_TOOLS_OS=macosx
+ENV PROTOBUF_TOOLS_CPU=arm64
+WORKDIR /source
+COPY . ./
+RUN dotnet publish -c release -o /app
 
-COPY bin/Release/netcoreapp5.0/publish/ app/
-
-ENTRYPOINT ["dotnet", "app/grpc-net.dll", "-server"]
-
+FROM mcr.microsoft.com/dotnet/runtime:6.0
+WORKDIR /app
+COPY --from=build /app ./
+ENTRYPOINT ["dotnet", "grpc-net.dll"]
